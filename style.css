@@ -1,0 +1,126 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #bb1642; 
+    /* background-image: url(top-view-lots-pink-hearts.jpg);
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; */
+}
+
+.likebody{
+    height: 100%;
+    width: 100%;
+    border-image: url(top-view-lots-pink-hearts.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 5;
+}
+
+ /*  container start */
+.container{
+    margin: 5px;
+    width: 99%;
+    height: 98vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    z-index: 10;
+    color: rgb(255, 255, 255);
+    text-shadow: 3px 3px 10px ;
+    font-style: italic;
+    font-size: 50px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.btn{
+    width: 80px;
+    height: 35px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 15px;
+    font-style: italic;
+    cursor: pointer;
+}
+.no{
+    position: absolute;
+    top: 450px;
+    left: 640px;
+    color: rgb(238, 83, 83);
+    border:1px solid white;
+    background: #000;
+    cursor: pointer;
+}
+
+.yes{
+    position: absolute;
+    top: 400px;
+    left: 640px;
+    color: rgb(254, 132, 244);
+    background: #000;
+    border:1px solid white;
+    cursor: pointer;
+}
+
+
+/* heart  */
+   :root{
+    --bgcolor : #de153d;
+   }
+       
+.heart{
+    display: none;
+    background-color: var(--bgcolor);
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 270px;
+    transform: rotate(-45deg);
+    box-shadow: 5px 5px 60px var(--bgcolor);
+    animation-name: heart;
+    animation-iteration-count: infinite;
+    animation-duration: 0.7s;
+    cursor: pointer;
+
+}
+@keyframes heart{
+    0%{transform: rotate(-45deg) scale(0.9)}
+
+    70%{
+        transform: rotate(-45deg) scale(1.1);
+    }
+    100%{
+        transform: rotate(-45deg) scale(1);
+    }
+}
+.heart::before{
+    content: "";
+    position: absolute;
+    top: -50%;
+    width: 50px;
+    height: 50px;
+    background-color: var(--bgcolor);
+    border-radius: 50px;
+    box-shadow: 5px -5px 60px var(--bgcolor);
+
+
+}
+.heart::after{
+    content: "";
+    position: absolute;
+    right: -50%;
+    width: 50px;
+    height: 50px;
+    background-color: var(--bgcolor);
+    border-radius: 50px;
+    box-shadow: 5px -5px 60px var(--bgcolor);
+
+}
+
